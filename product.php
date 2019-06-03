@@ -1,12 +1,10 @@
 <?php
 
 require_once 'DatabaseConnection.php';
-
-//session_start();
-//$sessionId = session_id();
 require_once 'header.php';
+$id = $_GET['id'];
 
-$stmt = $conn->prepare('SELECT * from products');
+$stmt = $conn->prepare('SELECT * from products WHERE id='. $id);
 $stmt->execute();
 $data = $stmt->bind_result($id, $name, $description, $image, $price);
 
@@ -35,5 +33,4 @@ foreach ($products as $item) {
     echo '</a></div><div class="cd-item-info"><b>' . $item['name'] . '</b>';
     echo '<em>$' . $item['price'] . '</em><br><p>' . $item['description'] . '</p></div></div></li>';
 }
-
 require_once 'footer.php';
