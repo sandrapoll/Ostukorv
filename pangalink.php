@@ -48,7 +48,7 @@ $fields = [
     "VK_LANG"     => "EST",
     "VK_MSG"      => "Ostukorvi tooted",
     "VK_RETURN"   => "http://localhost/emptyCart.php",
-    "VK_CANCEL"   => "http://localhost/cart.php",
+    "VK_CANCEL"   => "http://localhost/emptyCart.php",
     "VK_DATETIME" => "2019-06-04T00:14:56+0300",
     "VK_ENCODING" => "utf-8",
 ];
